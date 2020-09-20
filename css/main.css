@@ -31,9 +31,13 @@ img {
 }
 
 .contenido-centrado {
-  padding: 0 20px;
+  min-height: 100vh;
+  padding: 20px 20px 0px;
+  width: 100%;
   max-width: 800px;
   margin: 0 auto;
+  position: relative;
+  overflow: hidden;
 }
 
 .contenido-margin-izq {
@@ -45,7 +49,7 @@ img {
 .header-principal {
   width: 100%;
   background: #fcfcfc;
-  padding: 20px 0px 50px;
+  margin-bottom: 50px;
   min-height: 100vh;
 }
 
@@ -214,6 +218,7 @@ img {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+  margin-bottom: auto;
 }
 
 .footer-secciones .navegacion-secundaria {
@@ -304,7 +309,6 @@ img {
 }
 
 .leer-mas {
-  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -381,14 +385,98 @@ img {
   .botones .btn-principal {
     margin: 10px 15px;
   }
-  .leer-mas {
-    margin-top: 0;
-  }
 }
 
 @media (min-width: 768px) {
   .contenido-principal .descripcion-principal {
     max-width: 800px;
   }
+  .leer-mas {
+    margin-top: 60px;
+  }
+}
+
+.primer-seccion {
+  width: 100%;
+  background: #080808;
+  color: #fcfcfc;
+}
+
+.primer-seccion .visual {
+  display: none;
+}
+
+.primer-seccion .grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 3;
+      grid-template-columns: 3;
+  -ms-grid-rows: 150px 1fr 150px;
+      grid-template-rows: 150px 1fr 150px;
+}
+
+.primer-seccion .titulos-secciones {
+  margin-bottom: 50px;
+  height: 50px;
+  max-width: 500px;
+}
+
+.primer-seccion .linea-titulo-secundario {
+  width: 45%;
+  height: 6px;
+  background: white;
+  display: block;
+  margin: 10px 0;
+}
+
+.primer-seccion .descripcion-primer-seccion {
+  max-width: 500px;
+}
+
+.primer-seccion .titulo-secundario {
+  font-family: var(--tipografia-principal);
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  letter-spacing: 0px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.primer-seccion .texto-comun {
+  font-family: var(--tipografia-principal);
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  margin-bottom: 25px;
+  font-size: 0.95rem;
+  line-height: 1.8;
+}
+
+.primer-seccion .footer-secciones {
+  margin: 0 0 50px 0;
+  max-width: 500px;
+}
+
+.primer-seccion .footer-secciones .navegacion-secundaria {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.primer-seccion .footer-secciones .nav-num {
+  width: 40px;
+}
+
+.primer-seccion .footer-secciones .numero-sec {
+  color: #919191;
+}
+
+.primer-seccion .footer-secciones .selected {
+  color: white;
+  width: 50px;
+}
+
+.primer-seccion .footer-secciones .nombre-sec {
+  color: white;
+  width: 50px;
 }
 /*# sourceMappingURL=main.css.map */

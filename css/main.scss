@@ -30,9 +30,13 @@ img {
   height: 100%;
 }
 .contenido-centrado {
-  padding: 0 20px;
+  min-height: 100vh;
+  padding: 20px 20px 0px;
+  width: 100%;
   max-width: 800px;
   margin: 0 auto;
+  position: relative;
+  overflow: hidden;
 }
 .contenido-margin-izq {
   padding: 0 0 0 20px;
@@ -54,7 +58,7 @@ img {
 .header-principal {
   width: 100%;
   background: rgb(252, 252, 252);
-  padding: 20px 0px 50px;
+  margin-bottom: 50px;
   min-height: 100vh;
 }
 .navegacion-principal {
@@ -148,6 +152,7 @@ img {
   margin: 45px 0px 0px;
   width: 100%;
   @include flex(column, center, flex-start);
+  margin-bottom: auto;
 
   .navegacion-secundaria {
     width: 70%;
@@ -185,7 +190,6 @@ img {
   }
 }
 .leer-mas {
-  width: 100%;
   @include flex(column, center, center);
   margin-top: 30px;
   font-family: var(--tipografia-secundaria);
@@ -227,14 +231,85 @@ img {
       margin: 10px 15px;
     }
   }
-  .leer-mas {
-    margin-top: 0;
-  }
 }
 @media (min-width: 768px) {
   .contenido-principal {
     .descripcion-principal {
       max-width: 800px;
+    }
+  }
+  .leer-mas {
+    margin-top: 60px;
+  }
+}
+
+//INICIO PRIMER SECCION
+
+.primer-seccion {
+  width: 100%;
+  background: rgb(8, 8, 8);
+  color: rgb(252, 252, 252);
+
+  .visual {
+    display: none;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: 3;
+    grid-template-rows: 150px 1fr 150px;
+  }
+  .titulos-secciones {
+    margin-bottom: 50px;
+    height: 50px;
+    max-width: 500px;
+  }
+  .linea-titulo-secundario {
+    width: 45%;
+    height: 6px;
+    background: white;
+    display: block;
+    margin: 10px 0;
+  }
+  .descripcion-primer-seccion {
+    max-width: 500px;
+  }
+  .titulo-secundario {
+    font-family: var(--tipografia-principal);
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    letter-spacing: 0px;
+    font-weight: 600;
+    line-height: 1.5;
+  }
+
+  .texto-comun {
+    font-family: var(--tipografia-principal);
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    margin-bottom: 25px;
+    font-size: 0.95rem;
+    line-height: 1.8;
+  }
+
+  .footer-secciones {
+    margin: 0 0 50px 0;
+    max-width: 500px;
+    .navegacion-secundaria {
+      justify-content: space-between;
+    }
+    .nav-num {
+      width: 40px;
+    }
+    .numero-sec {
+      color: rgb(145, 145, 145);
+    }
+    .selected {
+      color: white;
+      width: 50px;
+    }
+    .nombre-sec {
+      color: white;
+      width: 50px;
     }
   }
 }
