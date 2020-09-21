@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
@@ -37,6 +38,10 @@ body {
 img {
   width: 100%;
   height: 100%;
+}
+a {
+  color: inherit;
+  text-decoration: none;
 }
 
 .oculto {
@@ -93,7 +98,7 @@ img {
 
 @media (min-width: 768px) {
   .grid {
-    grid-template-rows: 200px 350px 150px;
+    grid-template-rows: 200px 450px 150px;
   }
   .titulos-secciones {
     grid-column: 1 / 2;
@@ -421,10 +426,11 @@ img {
     line-height: 1.5;
     border: 1px solid rgb(177, 177, 177);
     margin-bottom: 30px;
-    max-width: 400px;
+    max-width: 550px;
     position: relative;
     color: rgb(102, 102, 102);
     cursor: pointer;
+    z-index: 2;
   }
   .descripcion-segunda-seccion::after {
     position: absolute;
@@ -445,23 +451,27 @@ img {
   .descripcion-segunda-seccion:nth-child(3)::after {
     content: "03";
   }
-
-  .descripcion-segunda-seccion:hover {
-    background: var(--color-negro);
-    color: var(--color-blanco);
-    transition: all 0.2s ease-in-out;
-    z-index: 0;
-    &:after {
-      color: rgb(116, 116, 116);
-    }
-  }
-
   .subtitulos-internos {
     text-transform: uppercase;
     font-size: 1.1rem;
     letter-spacing: 1px;
     z-index: 3;
+    color: var(--color-negro);
   }
+
+  .descripcion-segunda-seccion:hover {
+    background: var(--color-negro);
+    color: var(--color-blanco);
+    transition: all 0.2s ease-in-out;
+    z-index: 2;
+    .subtitulos-internos {
+      color: var(--color-blanco);
+    }
+    &:after {
+      color: rgb(85, 85, 85);
+    }
+  }
+
   .texto-comun {
     font-size: 1rem;
     margin-top: 5px;
@@ -479,10 +489,10 @@ img {
   }
   .img-principal {
     position: absolute;
-    height: 1430px;
-    top: -430px;
-    width: 580px;
-    left: 0px;
+    height: 1605px;
+    top: -453px;
+    width: 520px;
+    left: -40px;
   }
 }
 .segunda-seccion:after {
@@ -518,8 +528,8 @@ img {
 @media (min-width: 768px) {
   .segunda-seccion {
     .grid {
-      grid-template-columns: 450px 1fr;
-      grid-template-rows: 150px 850px 150px;
+      grid-template-columns: 550px 1fr;
+      grid-template-rows: 150px 1000px 150px;
     }
   }
 }
@@ -529,6 +539,28 @@ img {
     display: block;
     grid-column: 2 / 3;
     grid-row: 2 / 3;
+  }
+}
+@media (min-width: 1244px) {
+  .segunda-seccion {
+    .img-principal {
+      position: absolute;
+      height: 1605px;
+      top: -453px;
+      width: 590px;
+      left: -40px;
+    }
+  }
+}
+@media (min-width: 1440px) {
+  .segunda-seccion {
+    .img-principal {
+      position: absolute;
+      height: 1605px;
+      top: -453px;
+      width: 690px;
+      left: -40px;
+    }
   }
 }
 
@@ -580,7 +612,7 @@ img {
   .ultima-seccion {
     .grid {
       grid-template-columns: 1fr 1fr;
-      grid-template-rows: 400px 150px;
+      grid-template-rows: 450px 150px;
     }
     .testimonio {
       margin-left: 0;
