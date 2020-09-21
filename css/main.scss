@@ -141,11 +141,10 @@ img {
   max-width: 300px;
 
   .navegacion-secundaria {
-    width: 70%;
-    max-width: 250px;
+    width: 100%;
     height: 70px;
     @include flex(row, center, center);
-    justify-content: space-between;
+    cursor: pointer;
   }
   .nav-num {
     display: block;
@@ -156,16 +155,21 @@ img {
   }
   .numero-sec {
     display: block;
-    width: 100%;
+    width: 25%;
     height: 40px;
     @include flex(row, flex-start, center);
     font-size: clamp(1.4rem, 3vw, 2.5rem);
     letter-spacing: 1px;
     color: var(--color-gris);
   }
+  .numero-sec:hover {
+    font-size: clamp(2.2rem, 4vw, 3rem);
+    transition: all 0.3s ease-in-out;
+  }
   .selected {
     font-size: clamp(2.2rem, 4vw, 3rem);
     color: var(--color-negro);
+    width: 50px;
   }
   .nombre-sec {
     font-size: clamp(1rem, 4vw, 1.2rem);
@@ -197,17 +201,37 @@ img {
   text-transform: uppercase;
   font-size: clamp(0.8rem, 1.7vw, 1.1rem);
   color: var(--color-negro);
+  cursor: pointer;
   i {
     margin: 0 5px;
   }
+}
+.btn-principal:hover {
+  background: var(--color-negro);
+  color: var(--color-blanco);
+  border: 2px solid var(--color-blanco);
+  transition: all 0.2s ease-in-out;
 }
 
 //HEADER PRINCIPAL
 
 .header-principal {
+  position: relative;
   width: 100%;
-  background: var(--color-blanco);
-  margin-bottom: 50px;
+  background: white;
+  background: url("/images/pexels-adrian-boustead-955938.jpg") center / cover
+    no-repeat;
+  overflow: hidden;
+  padding-bottom: 50px;
+}
+.header-principal:after {
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.918);
+  position: absolute;
+  content: "";
+  z-index: 1;
 }
 .navegacion-principal {
   width: 100%;
@@ -215,6 +239,8 @@ img {
   margin: 0 auto;
   @include flex(row, center, center);
   flex-wrap: wrap;
+  position: relative;
+  z-index: 2;
   .logo {
     width: 100%;
     height: 100px;
@@ -223,6 +249,7 @@ img {
   .mini-logo {
     width: 90px;
     height: 90px;
+    cursor: pointer;
   }
   .numero,
   .correo {
@@ -232,6 +259,7 @@ img {
     font-size: 0.85rem;
     letter-spacing: 0.5px;
     color: var(--color-negro);
+    cursor: pointer;
   }
   .correo {
     justify-content: flex-end;
@@ -242,6 +270,8 @@ img {
   width: 100%;
   height: 350px;
   margin-top: 50px;
+  position: relative;
+  z-index: 2;
   .titulo-principal {
     width: 100%;
     text-align: center;
@@ -274,10 +304,13 @@ img {
 }
 
 .leer-mas {
+  position: relative;
+  z-index: 2;
   @include flex(column, center, center);
   margin-top: 30px;
   font-family: var(--tipografia-secundaria);
   text-transform: capitalize;
+  cursor: pointer;
   i {
     margin: 15px;
   }
@@ -390,6 +423,8 @@ img {
     margin-bottom: 30px;
     max-width: 400px;
     position: relative;
+    color: rgb(102, 102, 102);
+    cursor: pointer;
   }
   .descripcion-segunda-seccion::after {
     position: absolute;
@@ -403,6 +438,7 @@ img {
     color: rgb(219, 219, 219);
     z-index: -1;
   }
+
   .descripcion-segunda-seccion:nth-child(2)::after {
     content: "02";
   }
@@ -410,15 +446,26 @@ img {
     content: "03";
   }
 
+  .descripcion-segunda-seccion:hover {
+    background: var(--color-negro);
+    color: var(--color-blanco);
+    transition: all 0.2s ease-in-out;
+    z-index: 0;
+    &:after {
+      color: rgb(116, 116, 116);
+    }
+  }
+
   .subtitulos-internos {
     text-transform: uppercase;
     font-size: 1.1rem;
     letter-spacing: 1px;
+    z-index: 3;
   }
   .texto-comun {
     font-size: 1rem;
     margin-top: 5px;
-    color: rgb(102, 102, 102);
+    z-index: 3;
     letter-spacing: 1px;
   }
   .botones {
@@ -572,7 +619,7 @@ img {
   }
   .sub-footer {
     font-family: var(--tipografia-secundaria);
-    font-size: 1.2rem;
+    font-size: clamp(1.1rem, 2vw, 1.4rem);
     text-transform: capitalize;
     letter-spacing: 1px;
     margin-bottom: 5px;
@@ -642,4 +689,76 @@ img {
       grid-column: 1 / 5;
     }
   }
+}
+
+.nav-sec {
+  position: relative;
+  z-index: 2;
+  color: var(--color-gris);
+  width: 250px;
+  height: 100px;
+  @include flex(row, center, center);
+  .contenido-nav-sec {
+    flex: 1;
+    height: 100%;
+    @include flex(column, center, center);
+    cursor: pointer;
+  }
+  .numero-nav-sec {
+    width: 100%;
+    height: 60%;
+    @include flex(row, flex-start, center);
+    font-family: var(--tipografia-secundaria);
+    font-size: 1.7rem;
+  }
+  .nombre-nav-sec {
+    width: 100%;
+    height: 40%;
+    @include flex(row, flex-start, flex-start);
+    text-transform: uppercase;
+    font-family: var(--tipografia-secundaria);
+    font-size: 1.3rem;
+    color: var(--color-blanco);
+  }
+  .selection {
+    font-size: clamp(2.3rem, 4vw, 3rem);
+    color: black;
+  }
+  .selection-font {
+    color: black;
+  }
+}
+.contenido-nav-sec:hover {
+  .nombre-nav-sec {
+    color: black;
+    transition: all 0.5s ease-in-out;
+  }
+  .numero-nav-sec {
+    color: black;
+    transition: all 0.2s ease-in-out;
+    font-size: clamp(2.3rem, 4vw, 3rem);
+  }
+}
+
+.nom-nav-negativo {
+  color: rgb(41, 41, 41) !important;
+}
+.nav-sec-negativo:hover {
+  .nombre-nav-sec {
+    color: white !important;
+    transition: all 0.5s ease-in-out;
+  }
+  .numero-nav-sec {
+    color: white !important;
+    transition: all 0.2s ease-in-out;
+    font-size: clamp(2.3rem, 4vw, 3rem);
+  }
+}
+
+.selection-negativo {
+  font-size: clamp(2.3rem, 4vw, 3rem) !important;
+  color: white;
+}
+.selection-font-negativo {
+  color: white;
 }
