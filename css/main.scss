@@ -135,7 +135,7 @@ img {
 
 .footer-secciones {
   margin: 45px 0px 0px;
-  width: 100%;
+  width: 200px;
   @include flex(column, center, flex-start);
   margin-bottom: auto;
   max-width: 300px;
@@ -153,7 +153,6 @@ img {
     @include flex(column, center, center);
     font-family: var(--tipografia-secundaria);
     text-transform: uppercase;
-    width: 40px;
   }
   .numero-sec {
     display: block;
@@ -174,6 +173,11 @@ img {
     height: 30px;
     @include flex(row, flex-start, center);
     color: var(--color-negro);
+  }
+}
+@media (min-width: 768px) {
+  .footer-secciones {
+    width: 300px;
   }
 }
 
@@ -278,6 +282,11 @@ img {
     margin: 15px;
   }
 }
+@media (min-width: 768px) {
+  .leer-mas {
+    margin: 0;
+  }
+}
 
 //INICIO MEDIA QUERYS HEADER
 
@@ -316,12 +325,12 @@ img {
     .descripcion-principal {
       max-width: 800px;
     }
-  }
-  .footer-secciones {
-    margin-top: 80px;
-  }
-  .leer-mas {
-    margin-top: 00px;
+    .footer-secciones {
+      margin-top: 80px;
+    }
+    .leer-mas {
+      margin-top: 00px;
+    }
   }
 }
 
@@ -425,8 +434,8 @@ img {
     position: absolute;
     height: 1430px;
     top: -430px;
-    width: 500px;
-    left: -20px;
+    width: 580px;
+    left: 0px;
   }
 }
 .segunda-seccion:after {
