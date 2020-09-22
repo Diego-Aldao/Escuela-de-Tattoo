@@ -553,7 +553,7 @@ a {
   position: absolute;
   height: 1672px;
   top: -492px;
-  width: 1520px;
+  width: 520px;
   left: -40px;
 }
 
@@ -627,8 +627,8 @@ a {
 .ultima-seccion .grid {
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
-  -ms-grid-rows: 100px 450px 350px 150px;
-      grid-template-rows: 100px 450px 350px 150px;
+  -ms-grid-rows: 100px 450px 150px;
+      grid-template-rows: 100px 450px 150px;
 }
 
 .ultima-seccion .img-testimonio {
@@ -653,14 +653,6 @@ a {
   text-transform: uppercase;
 }
 
-.ultima-seccion .visual {
-  display: block;
-  background: aqua;
-  width: 100%;
-  max-width: 500px;
-  margin: 0 auto;
-}
-
 .ultima-seccion .selected {
   color: var(--color-blanco);
 }
@@ -671,6 +663,62 @@ a {
 
 .ultima-seccion .titulos-secciones {
   color: var(--color-blanco);
+}
+
+.trabajos {
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.trabajos .swiper-slide:nth-child(1) {
+  background: url("/images/slide-testimonios/pexels-gabriel-lara-3657562.jpg") center/cover no-repeat;
+}
+
+.trabajos .swiper-slide:nth-child(2) {
+  background: url("/images/slide-testimonios/pexels-cottonbro-4125589.jpg") center/cover no-repeat;
+}
+
+.trabajos .swiper-slide:nth-child(3) {
+  background: url("/images/slide-testimonios/pexels-cottonbro-4123834.jpg") center/cover no-repeat;
+}
+
+.trabajos .swiper-slide:nth-child(4) {
+  background: url("/images/slide-testimonios/pexels-cottonbro-4125517.jpg") center/cover no-repeat;
+}
+
+.trabajos .swiper-slide:nth-child(5) {
+  background: url("/images/slide-testimonios/pexels-cottonbro-4123895.jpg") center/cover no-repeat;
+}
+
+.trabajos .swiper-slide:nth-child(6) {
+  background: url("/images/slide-testimonios/pexels-cottonbro-4125609.jpg") center/cover no-repeat;
+}
+
+.trabajos:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.205);
+  z-index: 2;
+}
+
+.trabajos:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: white;
+  z-index: -1;
+  -webkit-transform: skewY(15deg);
+          transform: skewY(15deg);
 }
 
 .contenedor-testimonios {
@@ -744,8 +792,8 @@ a {
 */
 @media (min-width: 768px) {
   .ultima-seccion .grid {
-    -ms-grid-columns: 1fr 1fr;
-        grid-template-columns: 1fr 1fr;
+    -ms-grid-columns: 1fr 1.2fr;
+        grid-template-columns: 1fr 1.2fr;
     -ms-grid-rows: 150px 450px 150px;
         grid-template-rows: 150px 450px 150px;
   }
@@ -759,6 +807,9 @@ a {
   }
   .ultima-seccion .contenedor-testimonios {
     margin-left: 0;
+  }
+  .ultima-seccion .trabajos {
+    display: block;
   }
   .ultima-seccion .nav-sec {
     -ms-grid-row: 3;
@@ -1083,5 +1134,10 @@ a {
   background: white;
   width: 12px;
   height: 12px;
+}
+
+.swiper-pagination-white {
+  position: relative;
+  bottom: 0;
 }
 /*# sourceMappingURL=main.css.map */

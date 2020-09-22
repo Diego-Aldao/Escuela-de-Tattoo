@@ -415,7 +415,7 @@ a {
     position: absolute;
     height: 1672px;
     top: -492px;
-    width: 1520px;
+    width: 520px;
     left: -40px;
   }
 }
@@ -486,7 +486,7 @@ a {
   background: var(--color-negro);
   .grid {
     grid-template-columns: 1fr;
-    grid-template-rows: 100px 450px 350px 150px;
+    grid-template-rows: 100px 450px 150px;
   }
 
   .img-testimonio {
@@ -508,13 +508,6 @@ a {
     color: var(--color-blanco);
     text-transform: uppercase;
   }
-  .visual {
-    display: block;
-    background: aqua;
-    width: 100%;
-    max-width: 500px;
-    margin: 0 auto;
-  }
   .selected {
     color: var(--color-blanco);
   }
@@ -525,6 +518,60 @@ a {
     color: var(--color-blanco);
   }
 }
+.trabajos {
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  .swiper-slide:nth-child(1) {
+    background: url("/images/slide-testimonios/pexels-gabriel-lara-3657562.jpg")
+      center / cover no-repeat;
+  }
+  .swiper-slide:nth-child(2) {
+    background: url("/images/slide-testimonios/pexels-cottonbro-4125589.jpg")
+      center / cover no-repeat;
+  }
+  .swiper-slide:nth-child(3) {
+    background: url("/images/slide-testimonios/pexels-cottonbro-4123834.jpg")
+      center / cover no-repeat;
+  }
+  .swiper-slide:nth-child(4) {
+    background: url("/images/slide-testimonios/pexels-cottonbro-4125517.jpg")
+      center / cover no-repeat;
+  }
+  .swiper-slide:nth-child(5) {
+    background: url("/images/slide-testimonios/pexels-cottonbro-4123895.jpg")
+      center / cover no-repeat;
+  }
+
+  .swiper-slide:nth-child(6) {
+    background: url("/images/slide-testimonios/pexels-cottonbro-4125609.jpg")
+      center / cover no-repeat;
+  }
+}
+.trabajos:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.205);
+  z-index: 2;
+}
+.trabajos:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: white;
+  z-index: -1;
+  transform: skewY(15deg);
+}
+
 .contenedor-testimonios {
   @include flex(column, center, center);
   width: 100%;
@@ -581,7 +628,7 @@ a {
 @media (min-width: 768px) {
   .ultima-seccion {
     .grid {
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1.2fr;
       grid-template-rows: 150px 450px 150px;
     }
     .titulos-secciones {
@@ -590,6 +637,9 @@ a {
     }
     .contenedor-testimonios {
       margin-left: 0;
+    }
+    .trabajos {
+      display: block;
     }
     .nav-sec {
       grid-row: 3 / 4;
@@ -783,4 +833,9 @@ a {
   background: white;
   width: 12px;
   height: 12px;
+}
+
+.swiper-pagination-white {
+  position: relative;
+  bottom: 0;
 }
