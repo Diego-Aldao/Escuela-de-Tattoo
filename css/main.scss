@@ -109,7 +109,7 @@ a {
     grid-row: 2 / 3;
     grid-column: 1 / 2;
   }
-  .footer-secciones {
+  .nav-sec {
     grid-column: 1 / 2;
     grid-row: 3 / 4;
   }
@@ -135,58 +135,6 @@ a {
       z-index: 99;
       margin: auto 0;
     }
-  }
-}
-
-.footer-secciones {
-  margin: 45px 0px 0px;
-  width: 200px;
-  @include flex(column, center, flex-start);
-  margin-bottom: auto;
-  max-width: 300px;
-
-  .navegacion-secundaria {
-    width: 100%;
-    height: 70px;
-    @include flex(row, center, center);
-    cursor: pointer;
-  }
-  .nav-num {
-    display: block;
-    height: 100%;
-    @include flex(column, center, center);
-    font-family: var(--tipografia-secundaria);
-    text-transform: uppercase;
-  }
-  .numero-sec {
-    display: block;
-    width: 25%;
-    height: 40px;
-    @include flex(row, flex-start, center);
-    font-size: clamp(1.4rem, 3vw, 2.5rem);
-    letter-spacing: 1px;
-    color: var(--color-gris);
-  }
-  .numero-sec:hover {
-    font-size: clamp(2.2rem, 4vw, 3rem);
-    transition: all 0.3s ease-in-out;
-  }
-  .selected {
-    font-size: clamp(2.2rem, 4vw, 3rem);
-    color: var(--color-negro);
-    width: 50px;
-  }
-  .nombre-sec {
-    font-size: clamp(1rem, 4vw, 1.2rem);
-    width: 100%;
-    height: 30px;
-    @include flex(row, flex-start, center);
-    color: var(--color-negro);
-  }
-}
-@media (min-width: 768px) {
-  .footer-secciones {
-    width: 300px;
   }
 }
 
@@ -224,8 +172,7 @@ a {
   position: relative;
   width: 100%;
   background: white;
-  background: url("/images/pexels-adrian-boustead-955938.jpg") center / cover
-    no-repeat;
+  background: url("/images/imagen-fondo.webp") center / cover no-repeat;
   overflow: hidden;
   padding-bottom: 50px;
 }
@@ -285,8 +232,7 @@ a {
     margin: 0;
     padding: 0;
     color: var(--color-blanco); //por si el navegador no soporta background clip
-    background: url("/images/pexels-gabriel-lara-3657563.jpg") center / cover
-      no-repeat;
+    background: url("/images/imagen-titulo.webp") center / cover no-repeat;
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -363,7 +309,7 @@ a {
     .descripcion-principal {
       max-width: 800px;
     }
-    .footer-secciones {
+    .nav-sec {
       margin-top: 80px;
     }
     .leer-mas {
@@ -385,36 +331,13 @@ a {
     max-width: 700px;
     padding-right: 20px;
   }
-
-  .footer-secciones {
-    margin: 0 0 50px 0;
-    max-width: 300px;
-    .navegacion-secundaria {
-      justify-content: space-between;
-    }
-    .nav-num {
-      width: 40px;
-    }
-    .numero-sec {
-      color: var(--color-gris);
-    }
-    .selected {
-      color: var(--color-blanco);
-      width: 50px;
-    }
-    .nombre-sec {
-      color: var(--color-blanco);
-      width: 50px;
-    }
-  }
 }
 
 //INICIO SEGUNDA SECCION
 
 .segunda-seccion {
   position: relative;
-  background: url("/images/pexels-adrian-boustead-955938.jpg") center / cover
-    no-repeat;
+  background: url("/images//imagen-fondo.webp") center / cover no-repeat;
   .contenido-centrado {
     z-index: 2;
   }
@@ -573,21 +496,21 @@ a {
     grid-template-rows: 450px 250px 150px;
     grid-row-gap: 50px;
   }
-  .testimonio {
-    @include flex(column, flex-start, center);
-    max-width: 320px;
-    margin: 0 auto;
-  }
+
   .img-testimonio {
-    width: 100%;
+    width: 0px;
     max-width: 320px;
-    height: 200px;
+    height: 00px;
   }
   .quote {
     color: var(--color-blanco);
     padding: 20px;
-    text-align: justify;
+    text-align: center;
     margin: 0;
+    position: relative;
+    z-index: 2;
+    font-size: 1rem;
+    line-height: 2.5;
   }
   .autor {
     color: var(--color-blanco);
@@ -603,10 +526,41 @@ a {
   .nombre-sec {
     color: var(--color-blanco);
   }
-  .footer-secciones {
-    margin: 0;
-  }
 }
+.testimonio {
+  @include flex(column, center, center);
+  max-width: 320px;
+  margin: 0 auto;
+  position: relative;
+  background: url("/images/personas/persona-01.webp") center / cover no-repeat;
+}
+.testimonio:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.473);
+}
+/*PARA MEJORAR
+.testimonio:before {
+  content: "-sergio";
+  position: absolute;
+  bottom: 0px;
+  right: 0;
+  width: 80px;
+  height: 20px;
+  z-index: 2;
+  @include flex(row, center, center);
+  font-size: 1rem;
+  font-weight: 700;
+  color: white;
+  font-family: var(--tipografia-principal);
+  text-transform: capitalize;
+  letter-spacing: 1px;
+}
+*/
 
 @media (min-width: 768px) {
   .ultima-seccion {
@@ -617,7 +571,7 @@ a {
     .testimonio {
       margin-left: 0;
     }
-    .footer-secciones {
+    .nav-sec {
       grid-row: 2 / 3;
     }
   }

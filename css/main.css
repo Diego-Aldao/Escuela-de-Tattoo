@@ -110,7 +110,7 @@ a {
     -ms-grid-column-span: 1;
     grid-column: 1 / 2;
   }
-  .footer-secciones {
+  .nav-sec {
     -ms-grid-column: 1;
     -ms-grid-column-span: 1;
     grid-column: 1 / 2;
@@ -146,125 +146,6 @@ a {
     height: 350px;
     z-index: 99;
     margin: auto 0;
-  }
-}
-
-.footer-secciones {
-  margin: 45px 0px 0px;
-  width: 200px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  margin-bottom: auto;
-  max-width: 300px;
-}
-
-.footer-secciones .navegacion-secundaria {
-  width: 100%;
-  height: 70px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  cursor: pointer;
-}
-
-.footer-secciones .nav-num {
-  display: block;
-  height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  font-family: var(--tipografia-secundaria);
-  text-transform: uppercase;
-}
-
-.footer-secciones .numero-sec {
-  display: block;
-  width: 25%;
-  height: 40px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  font-size: clamp(1.4rem, 3vw, 2.5rem);
-  letter-spacing: 1px;
-  color: var(--color-gris);
-}
-
-.footer-secciones .numero-sec:hover {
-  font-size: clamp(2.2rem, 4vw, 3rem);
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-}
-
-.footer-secciones .selected {
-  font-size: clamp(2.2rem, 4vw, 3rem);
-  color: var(--color-negro);
-  width: 50px;
-}
-
-.footer-secciones .nombre-sec {
-  font-size: clamp(1rem, 4vw, 1.2rem);
-  width: 100%;
-  height: 30px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  color: var(--color-negro);
-}
-
-@media (min-width: 768px) {
-  .footer-secciones {
-    width: 300px;
   }
 }
 
@@ -314,7 +195,7 @@ a {
   position: relative;
   width: 100%;
   background: white;
-  background: url("/images/pexels-adrian-boustead-955938.jpg") center/cover no-repeat;
+  background: url("/images/imagen-fondo.webp") center/cover no-repeat;
   overflow: hidden;
   padding-bottom: 50px;
 }
@@ -421,7 +302,7 @@ a {
   margin: 0;
   padding: 0;
   color: var(--color-blanco);
-  background: url("/images/pexels-gabriel-lara-3657563.jpg") center/cover no-repeat;
+  background: url("/images/imagen-titulo.webp") center/cover no-repeat;
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -532,7 +413,7 @@ a {
   .contenido-principal .descripcion-principal {
     max-width: 800px;
   }
-  .contenido-principal .footer-secciones {
+  .contenido-principal .nav-sec {
     margin-top: 80px;
   }
   .contenido-principal .leer-mas {
@@ -553,38 +434,9 @@ a {
   padding-right: 20px;
 }
 
-.primer-seccion .footer-secciones {
-  margin: 0 0 50px 0;
-  max-width: 300px;
-}
-
-.primer-seccion .footer-secciones .navegacion-secundaria {
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.primer-seccion .footer-secciones .nav-num {
-  width: 40px;
-}
-
-.primer-seccion .footer-secciones .numero-sec {
-  color: var(--color-gris);
-}
-
-.primer-seccion .footer-secciones .selected {
-  color: var(--color-blanco);
-  width: 50px;
-}
-
-.primer-seccion .footer-secciones .nombre-sec {
-  color: var(--color-blanco);
-  width: 50px;
-}
-
 .segunda-seccion {
   position: relative;
-  background: url("/images/pexels-adrian-boustead-955938.jpg") center/cover no-repeat;
+  background: url("/images//imagen-fondo.webp") center/cover no-repeat;
 }
 
 .segunda-seccion .contenido-centrado {
@@ -786,35 +638,21 @@ a {
   grid-row-gap: 50px;
 }
 
-.ultima-seccion .testimonio {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  max-width: 320px;
-  margin: 0 auto;
-}
-
 .ultima-seccion .img-testimonio {
-  width: 100%;
+  width: 0px;
   max-width: 320px;
-  height: 200px;
+  height: 00px;
 }
 
 .ultima-seccion .quote {
   color: var(--color-blanco);
   padding: 20px;
-  text-align: justify;
+  text-align: center;
   margin: 0;
+  position: relative;
+  z-index: 2;
+  font-size: 1rem;
+  line-height: 2.5;
 }
 
 .ultima-seccion .autor {
@@ -835,10 +673,54 @@ a {
   color: var(--color-blanco);
 }
 
-.ultima-seccion .footer-secciones {
-  margin: 0;
+.testimonio {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 320px;
+  margin: 0 auto;
+  position: relative;
+  background: url("/images/personas/persona-01.webp") center/cover no-repeat;
 }
 
+.testimonio:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.473);
+}
+
+/*PARA MEJORAR
+.testimonio:before {
+  content: "-sergio";
+  position: absolute;
+  bottom: 0px;
+  right: 0;
+  width: 80px;
+  height: 20px;
+  z-index: 2;
+  @include flex(row, center, center);
+  font-size: 1rem;
+  font-weight: 700;
+  color: white;
+  font-family: var(--tipografia-principal);
+  text-transform: capitalize;
+  letter-spacing: 1px;
+}
+*/
 @media (min-width: 768px) {
   .ultima-seccion .grid {
     -ms-grid-columns: 1fr 1fr;
@@ -849,7 +731,7 @@ a {
   .ultima-seccion .testimonio {
     margin-left: 0;
   }
-  .ultima-seccion .footer-secciones {
+  .ultima-seccion .nav-sec {
     -ms-grid-row: 2;
     -ms-grid-row-span: 1;
     grid-row: 2 / 3;
