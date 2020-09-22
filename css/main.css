@@ -29,6 +29,8 @@ body {
 img {
   width: 100%;
   height: 100%;
+  -o-object-fit: fill;
+     object-fit: fill;
 }
 
 a {
@@ -85,8 +87,9 @@ a {
   padding: 100px 20px 0;
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: 150px 1fr 150px;
-      grid-template-rows: 150px 1fr 150px;
+  -ms-grid-rows: 120px 1fr 150px;
+      grid-template-rows: 120px 1fr 150px;
+  grid-row-gap: 30px;
 }
 
 @media (min-width: 768px) {
@@ -548,9 +551,9 @@ a {
 
 .segunda-seccion .img-principal {
   position: absolute;
-  height: 1605px;
-  top: -453px;
-  width: 520px;
+  height: 1672px;
+  top: -492px;
+  width: 1520px;
   left: -40px;
 }
 
@@ -607,21 +610,13 @@ a {
 
 @media (min-width: 1244px) {
   .segunda-seccion .img-principal {
-    position: absolute;
-    height: 1605px;
-    top: -453px;
     width: 590px;
-    left: -40px;
   }
 }
 
 @media (min-width: 1440px) {
   .segunda-seccion .img-principal {
-    position: absolute;
-    height: 1605px;
-    top: -453px;
     width: 690px;
-    left: -40px;
   }
 }
 
@@ -632,9 +627,8 @@ a {
 .ultima-seccion .grid {
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
-  -ms-grid-rows: 450px 250px 150px;
-      grid-template-rows: 450px 250px 150px;
-  grid-row-gap: 50px;
+  -ms-grid-rows: 100px 450px 350px 150px;
+      grid-template-rows: 100px 450px 350px 150px;
 }
 
 .ultima-seccion .img-testimonio {
@@ -662,6 +656,9 @@ a {
 .ultima-seccion .visual {
   display: block;
   background: aqua;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
 }
 
 .ultima-seccion .selected {
@@ -672,7 +669,11 @@ a {
   color: var(--color-blanco);
 }
 
-.testimonio {
+.ultima-seccion .titulos-secciones {
+  color: var(--color-blanco);
+}
+
+.contenedor-testimonios {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -686,13 +687,14 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  width: 100%;
   max-width: 320px;
-  margin: 0 auto;
   position: relative;
-  background: url("/images/personas/persona-01.webp") center/cover no-repeat;
+  overflow: hidden;
+  margin: 0 auto;
 }
 
-.testimonio:after {
+.slide-testimonios:after {
   content: "";
   position: absolute;
   top: 0;
@@ -700,6 +702,26 @@ a {
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.473);
+}
+
+.slide-testimonios {
+  background: url(/images/personas/persona-01.webp) center/cover no-repeat;
+}
+
+.slide-testimonios:nth-child(2) {
+  background: url(/images/personas/persona-02.webp) center/cover no-repeat;
+}
+
+.slide-testimonios:nth-child(3) {
+  background: url(/images/personas/persona-03.webp) center/cover no-repeat;
+}
+
+.slide-testimonios:nth-child(4) {
+  background: url(/images/personas/persona-04.webp) center/cover no-repeat;
+}
+
+.slide-testimonios:nth-child(5) {
+  background: url(/images/personas/persona-05.webp) center/cover no-repeat;
 }
 
 /*PARA MEJORAR
@@ -724,16 +746,24 @@ a {
   .ultima-seccion .grid {
     -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
-    -ms-grid-rows: 450px 150px;
-        grid-template-rows: 450px 150px;
+    -ms-grid-rows: 150px 450px 150px;
+        grid-template-rows: 150px 450px 150px;
   }
-  .ultima-seccion .testimonio {
+  .ultima-seccion .titulos-secciones {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-column: 1/ 3;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1 / 2;
+  }
+  .ultima-seccion .contenedor-testimonios {
     margin-left: 0;
   }
   .ultima-seccion .nav-sec {
-    -ms-grid-row: 2;
+    -ms-grid-row: 3;
     -ms-grid-row-span: 1;
-    grid-row: 2 / 3;
+    grid-row: 3 / 4;
   }
 }
 

@@ -5,3 +5,11 @@ var swiper = new Swiper(".swiper-container", {
     clickable: true,
   },
 });
+
+var swiper = new Swiper(".contenedor-testimonios", {
+  pagination: {
+    el: ".swiper-pagination",
+    dynamicBullets: true,
+    clickable: true,
+  },
+});
