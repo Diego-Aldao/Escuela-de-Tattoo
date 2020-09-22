@@ -71,9 +71,12 @@ a {
   margin-bottom: 25px;
   font-size: clamp(0.9rem, 2vw, 1.05rem);
   line-height: 1.8;
+  position: relative;
 }
 
 .titulos-secciones {
+  overflow: hidden;
+  position: relative;
   .titulo-secundario {
     text-transform: uppercase;
     font-size: clamp(1.5rem, 4vw, 2.5rem);
@@ -148,6 +151,7 @@ a {
 }
 
 .btn-principal {
+  position: relative;
   padding: 6px 8px;
   border: 2px solid var(--color-negro);
   margin: 10px 0px;
@@ -226,6 +230,7 @@ a {
   position: relative;
   z-index: 2;
   .titulo-principal {
+    position: relative;
     width: 100%;
     text-align: center;
     text-transform: uppercase;
@@ -242,6 +247,7 @@ a {
     letter-spacing: -3px;
   }
   .descripcion-principal {
+    position: relative;
     width: 100%;
     text-align: center;
     font-weight: 400;
@@ -560,17 +566,6 @@ a {
   background: rgba(0, 0, 0, 0.205);
   z-index: 2;
 }
-.trabajos:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: white;
-  z-index: -1;
-  transform: skewY(15deg);
-}
 
 .contenedor-testimonios {
   @include flex(column, center, center);
@@ -579,6 +574,7 @@ a {
   position: relative;
   overflow: hidden;
   margin: 0 auto;
+  cursor: pointer;
 }
 .slide-testimonios:after {
   content: "";
@@ -672,6 +668,7 @@ a {
   .ubicaciones {
     @include flex(column, center, center);
     text-align: center;
+    position: relative;
   }
   .sub-footer {
     font-family: var(--tipografia-secundaria);

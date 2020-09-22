@@ -64,6 +64,12 @@ a {
   margin-bottom: 25px;
   font-size: clamp(0.9rem, 2vw, 1.05rem);
   line-height: 1.8;
+  position: relative;
+}
+
+.titulos-secciones {
+  overflow: hidden;
+  position: relative;
 }
 
 .titulos-secciones .titulo-secundario {
@@ -171,6 +177,7 @@ a {
 }
 
 .btn-principal {
+  position: relative;
   padding: 6px 8px;
   border: 2px solid var(--color-negro);
   margin: 10px 0px;
@@ -297,6 +304,7 @@ a {
 }
 
 .contenido-principal .titulo-principal {
+  position: relative;
   width: 100%;
   text-align: center;
   text-transform: uppercase;
@@ -315,6 +323,7 @@ a {
 }
 
 .contenido-principal .descripcion-principal {
+  position: relative;
   width: 100%;
   text-align: center;
   font-weight: 400;
@@ -708,19 +717,6 @@ a {
   z-index: 2;
 }
 
-.trabajos:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: white;
-  z-index: -1;
-  -webkit-transform: skewY(15deg);
-          transform: skewY(15deg);
-}
-
 .contenedor-testimonios {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -740,6 +736,7 @@ a {
   position: relative;
   overflow: hidden;
   margin: 0 auto;
+  cursor: pointer;
 }
 
 .slide-testimonios:after {
@@ -873,6 +870,7 @@ a {
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
+  position: relative;
 }
 
 .footer-principal .sub-footer {
