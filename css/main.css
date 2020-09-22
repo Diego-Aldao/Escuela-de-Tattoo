@@ -289,6 +289,16 @@ a {
   cursor: pointer;
 }
 
+.navegacion-principal .numero i,
+.navegacion-principal .correo i {
+  display: none;
+  margin-right: 5px;
+  margin-bottom: 25px;
+  height: 10px;
+  width: 10px;
+  font-size: 1.1rem;
+}
+
 .navegacion-principal .correo {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
@@ -372,12 +382,17 @@ a {
   .contenido-principal {
     margin-top: 150px;
   }
+  .navegacion-principal {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
   .navegacion-principal .logo {
     display: none;
   }
   .navegacion-principal .oculto-movil {
     display: block;
-    width: 33.3%;
+    width: 90px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -394,7 +409,7 @@ a {
   }
   .navegacion-principal .numero,
   .navegacion-principal .correo {
-    width: 33.3%;
+    width: 40%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -429,6 +444,11 @@ a {
   }
   .contenido-principal .leer-mas {
     margin-top: 00px;
+  }
+  .navegacion-principal .numero i,
+  .navegacion-principal .correo i {
+    display: block;
+    margin-right: 25px;
   }
 }
 

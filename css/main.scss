@@ -217,6 +217,14 @@ a {
     letter-spacing: 0.5px;
     color: var(--color-negro);
     cursor: pointer;
+    i {
+      display: none;
+      margin-right: 5px;
+      margin-bottom: 25px;
+      height: 10px;
+      width: 10px;
+      font-size: 1.1rem;
+    }
   }
   .correo {
     justify-content: flex-end;
@@ -286,17 +294,18 @@ a {
     margin-top: 150px;
   }
   .navegacion-principal {
+    justify-content: space-between;
     .logo {
       display: none;
     }
     .oculto-movil {
       display: block;
-      width: 33.3%;
+      width: 90px;
       @include flex(row, center, center);
     }
     .numero,
     .correo {
-      width: 33.3%;
+      width: 40%;
       @include flex(row, center, center);
     }
   }
@@ -321,6 +330,15 @@ a {
     }
     .leer-mas {
       margin-top: 00px;
+    }
+  }
+  .navegacion-principal {
+    .numero,
+    .correo {
+      i {
+        display: block;
+        margin-right: 25px;
+      }
     }
   }
 }

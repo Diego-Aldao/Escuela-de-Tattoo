@@ -46,12 +46,12 @@ gsap.from(".titulos-secciones", {
   opacity: 0,
 });
 
-gsap.from(".texto-comun", {
+/*gsap.from(".texto-comun", {
   duration: 0.5,
   delay: 5,
   bottom: "-20px",
   opacity: 0,
-});
+});*/
 
 gsap.from(".descripcion-segunda-seccion", {
   duration: 0.5,
