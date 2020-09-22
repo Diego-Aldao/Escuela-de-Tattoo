@@ -122,8 +122,8 @@ a {
 
 @media (min-width: 1024px) {
   .grid {
-    -ms-grid-columns: 3fr 1.2fr;
-        grid-template-columns: 3fr 1.2fr;
+    -ms-grid-columns: 2.1fr 1.5fr;
+        grid-template-columns: 2.1fr 1.5fr;
     -ms-grid-rows: 200px 500px 150px;
         grid-template-rows: 200px 500px 150px;
     position: relative;
@@ -140,7 +140,6 @@ a {
     max-height: 500px;
   }
   .visuales .visual {
-    background: aqua;
     position: absolute;
     width: 550px;
     height: 350px;
@@ -1027,5 +1026,32 @@ a {
 
 .selection-font-negativo {
   color: white;
+}
+
+.videos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.video {
+  width: 100%;
+  height: 90%;
+}
+
+.swiper-pagination-bullet {
+  background: white;
+  width: 12px;
+  height: 12px;
 }
 /*# sourceMappingURL=main.css.map */
