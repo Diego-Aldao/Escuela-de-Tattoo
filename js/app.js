@@ -19,6 +19,7 @@ var swiper = new Swiper(".trabajos", {
   effect: "fade",
   autoplay: true,
   speed: 1500,
+  loop: true,
 });
 
 gsap.from(".titulo-principal", {

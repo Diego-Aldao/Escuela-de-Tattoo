@@ -703,27 +703,27 @@ a {
 }
 
 .trabajos .swiper-slide:nth-child(1) {
-  background: url("/images/slide-testimonios/pexels-gabriel-lara-3657562.jpg") center/cover no-repeat;
+  background: url("/images/slide-testimonios/trabajo-01.webp") center/cover no-repeat;
 }
 
 .trabajos .swiper-slide:nth-child(2) {
-  background: url("/images/slide-testimonios/pexels-cottonbro-4125589.jpg") center/cover no-repeat;
+  background: url("/images/slide-testimonios/trabajo-02.webp") center/cover no-repeat;
 }
 
 .trabajos .swiper-slide:nth-child(3) {
-  background: url("/images/slide-testimonios/pexels-cottonbro-4123834.jpg") center/cover no-repeat;
+  background: url("/images/slide-testimonios/trabajo-03.webp") center/cover no-repeat;
 }
 
 .trabajos .swiper-slide:nth-child(4) {
-  background: url("/images/slide-testimonios/pexels-cottonbro-4125517.jpg") center/cover no-repeat;
+  background: url("/images/slide-testimonios/trabajo-04.webp") center/cover no-repeat;
 }
 
 .trabajos .swiper-slide:nth-child(5) {
-  background: url("/images/slide-testimonios/pexels-cottonbro-4123895.jpg") center/cover no-repeat;
+  background: url("/images/slide-testimonios/trabajo-05.webp") center/cover no-repeat;
 }
 
 .trabajos .swiper-slide:nth-child(6) {
-  background: url("/images/slide-testimonios/pexels-cottonbro-4125609.jpg") center/cover no-repeat;
+  background: url("/images/slide-testimonios/trabajo-06.webp") center/cover no-repeat;
 }
 
 .trabajos:after {
