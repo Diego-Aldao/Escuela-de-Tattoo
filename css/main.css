@@ -33,6 +33,41 @@ a {
   text-decoration: none;
 }
 
+.animacion-uno {
+  opacity: 0;
+  bottom: -10px;
+}
+
+.animacion-dos {
+  opacity: 0;
+  left: -20px;
+}
+
+.animacion-tres {
+  opacity: 0;
+  right: -20px;
+}
+
+.final-uno,
+.final-dos,
+.final-tres {
+  opacity: 1;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.final-uno {
+  bottom: 0px;
+}
+
+.final-dos {
+  left: 0px;
+}
+
+.final-tres {
+  right: 0px;
+}
+
 .oculto {
   display: none;
 }
@@ -181,6 +216,8 @@ a {
   text-transform: uppercase;
   font-size: clamp(0.8rem, 1.7vw, 1.1rem);
   cursor: pointer;
+  -webkit-transition-delay: 0.5s;
+          transition-delay: 0.5s;
 }
 
 .btn-principal i {
@@ -523,6 +560,8 @@ a {
   margin-top: 30px;
   font-family: var(--tipografia-secundaria);
   text-transform: capitalize;
+  -webkit-transition-delay: 1s;
+          transition-delay: 1s;
   cursor: pointer;
 }
 

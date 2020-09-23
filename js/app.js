@@ -22,76 +22,30 @@ var swiper = new Swiper(".trabajos", {
   loop: true,
 });
 
-gsap.from(".titulo-principal", {
-  duration: 0.5,
-  bottom: "-50px",
-  opacity: 0,
-});
+//API INTESERCTION OBSERVER
+const crearObservador = (animacion, nuevaClase) => {
+  const secciones = document.querySelectorAll(animacion);
 
-gsap.from(".descripcion-principal", {
-  delay: 0.5,
-  bottom: "-25px",
-  opacity: 0,
-});
+  const options = {
+    root: null, //es el default, todo el viewport
+    threshold: 0.2, // 0 dispara en el momento que el elemento entra al observador, 1 dispara cuando todo el elemento ya esta dentro del observador
+  };
 
-gsap.from(".btn-principal", {
-  delay: 1,
-  left: "-20px",
-  opacity: 0,
-});
+  const observer = new IntersectionObserver(function (entries, observer) {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) {
+        return;
+      } //si no esta en la pantalla, termina la funcion
+      entry.target.classList.add(nuevaClase);
 
-gsap.from(".titulos-secciones", {
-  duration: 0.5,
-  delay: 5,
-  left: "-20px",
-  opacity: 0,
-});
+      observer.unobserve(entry.target); //para que las animaciones solo se ejecuten la primera vez que se entra en la seccion.
+    });
+  }, options);
+  secciones.forEach((section) => {
+    observer.observe(section); //al usar querySelectorAll tengo un array con las secciones, y lo que quiero lograr es observar uno por uno
+  });
+};
 
-/*gsap.from(".texto-comun", {
-  duration: 0.5,
-  delay: 5,
-  bottom: "-20px",
-  opacity: 0,
-});*/
-
-gsap.from(".descripcion-segunda-seccion", {
-  duration: 0.5,
-  delay: 5,
-  bottom: "-20px",
-  opacity: 0,
-});
-
-gsap.from(".contenedor-testimonios", {
-  duration: 0.5,
-  delay: 5,
-  bottom: "-20px",
-  opacity: 0,
-});
-
-gsap.from(".trabajos", {
-  duration: 0.5,
-  delay: 5,
-  left: "-20px",
-  opacity: 0,
-});
-
-gsap.from(".company-desc", {
-  duration: 0.5,
-  delay: 5,
-  bottom: "-20px",
-  opacity: 0,
-});
-
-gsap.from(".ubicaciones", {
-  duration: 0.5,
-  delay: 5,
-  bottom: "-20px",
-  opacity: 0,
-});
-
-gsap.from(".nav-sec", {
-  duration: 0.5,
-  delay: 5,
-  bottom: "-20px",
-  opacity: 0,
-});
+crearObservador(".animacion-uno", "final-uno");
+crearObservador(".animacion-dos", "final-dos");
+crearObservador(".animacion-tres", "final-tres");
