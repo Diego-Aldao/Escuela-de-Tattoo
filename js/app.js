@@ -28,7 +28,7 @@ const crearObservador = (animacion, nuevaClase) => {
 
   const options = {
     root: null, //es el default, todo el viewport
-    threshold: 0.2, // 0 dispara en el momento que el elemento entra al observador, 1 dispara cuando todo el elemento ya esta dentro del observador
+    threshold: 0.3, // 0 dispara en el momento que el elemento entra al observador, 1 dispara cuando todo el elemento ya esta dentro del observador
   };
 
   const observer = new IntersectionObserver(function (entries, observer) {

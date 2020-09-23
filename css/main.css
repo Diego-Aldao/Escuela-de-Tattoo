@@ -896,30 +896,6 @@ a {
   overflow: hidden;
 }
 
-.trabajos .swiper-slide:nth-child(1) {
-  background: url("/images/slide-testimonios/trabajo-01.webp") center/cover no-repeat;
-}
-
-.trabajos .swiper-slide:nth-child(2) {
-  background: url("/images/slide-testimonios/trabajo-02.webp") center/cover no-repeat;
-}
-
-.trabajos .swiper-slide:nth-child(3) {
-  background: url("/images/slide-testimonios/trabajo-03.webp") center/cover no-repeat;
-}
-
-.trabajos .swiper-slide:nth-child(4) {
-  background: url("/images/slide-testimonios/trabajo-04.webp") center/cover no-repeat;
-}
-
-.trabajos .swiper-slide:nth-child(5) {
-  background: url("/images/slide-testimonios/trabajo-05.webp") center/cover no-repeat;
-}
-
-.trabajos .swiper-slide:nth-child(6) {
-  background: url("/images/slide-testimonios/trabajo-06.webp") center/cover no-repeat;
-}
-
 .trabajos:after {
   content: "";
   position: absolute;
