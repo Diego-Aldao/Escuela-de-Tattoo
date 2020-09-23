@@ -1,26 +1,28 @@
-var swiper = new Swiper(".swiper-container", {
-  pagination: {
-    el: ".swiper-pagination",
-    dynamicBullets: true,
-    clickable: true,
-  },
-});
+window.onload = () => {
+  var swiper = new Swiper(".swiper-container", {
+    pagination: {
+      el: ".swiper-pagination",
+      dynamicBullets: true,
+      clickable: true,
+    },
+  });
 
-var swiper = new Swiper(".contenedor-testimonios", {
-  pagination: {
-    el: ".swiper-pagination",
-    dynamicBullets: true,
-    clickable: true,
-  },
-});
+  var swiper = new Swiper(".contenedor-testimonios", {
+    pagination: {
+      el: ".swiper-pagination",
+      dynamicBullets: true,
+      clickable: true,
+    },
+  });
 
-var swiper = new Swiper(".trabajos", {
-  spaceBetween: 50,
-  effect: "fade",
-  autoplay: true,
-  speed: 1500,
-  loop: true,
-});
+  var swiper = new Swiper(".trabajos", {
+    spaceBetween: 50,
+    effect: "fade",
+    autoplay: true,
+    speed: 1500,
+    loop: true,
+  });
+};
 
 //API INTESERCTION OBSERVER
 const crearObservador = (animacion, nuevaClase) => {
