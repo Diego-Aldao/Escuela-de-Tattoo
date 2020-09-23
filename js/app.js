@@ -15,7 +15,7 @@ var swiper = new Swiper(".contenedor-testimonios", {
 });
 
 var swiper = new Swiper(".trabajos", {
-  spaceBetween: 30,
+  spaceBetween: 50,
   effect: "fade",
   autoplay: true,
   speed: 1500,
